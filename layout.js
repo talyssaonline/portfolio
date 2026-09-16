@@ -28,7 +28,8 @@ function headerHTML() {
     <header>
       <div class="header-content">
       <ul>
-          <a href="index.html" target="_self">> Home</a> 
+          <a href="index.html" target="_self">> Home</a>
+          <a href="links.html" target="_self">> Link Page</a> 
           <a href="resources.html" target="_self">> Resources</a>
       </ul>
       </div>

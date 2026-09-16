@@ -1,0 +1,89 @@
+body {
+  background-image: url('assets/spider_web2.jpg');
+  background-position: center;
+  background-repeat: none;
+  background-size: auto;
+  font-family: sans-serif;
+  font-style: oblique;
+  background-color: white;
+  max-width: 100%;
+  text-align: center;
+  margin: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  color: #4cb065;
+}
+
+header {
+  text-align: center;
+  margin: 1em;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+h1 {
+  font-size: 30px;
+  color: #4cb065;
+  font-family: sans-serif;
+  font-style: oblique;
+}
+
+h3 {
+  font-size: 20px;
+  color: #4cb065;
+}
+
+p {
+  font-size: 15px;
+  line-height: normal;
+  color: #4cb065;
+}
+
+.mainbox {
+  /*background-color: rgba(235, 252, 255, 0.3);*/
+  border-radius: 10px;
+  padding: 20px;
+  width: 80%;
+  height: auto;
+  max-width: 400px;
+  margin-top: 90px;
+  overflow-x: hidden;
+}
+
+/* SCROLLBAR */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background: transparent;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}
+
+a {
+  color: #4cb065;
+}
+
+a:visited {
+  color: #4cb065;
+}
