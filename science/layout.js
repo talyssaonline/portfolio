@@ -28,9 +28,9 @@ function headerHTML() {
     <header>
       <div class="header-content">
       <ul>
-          <a href="index.html" target="_self">> Home</a>
-          <a href="/links" target="_self">> Link Page</a> 
-          <a href="resources.html" target="_self">> Resources</a>
+          <a href="../index.html" target="_self">> Home</a>
+          <a href="../links" target="_self">> Link Page</a> 
+          <a href="../resources/index.html" target="_self">> Resources</a>
       </ul>
       </div>
     </header>
@@ -41,7 +41,7 @@ function headerHTML() {
 
       <aside class="left-sidebar">
 
-       <img class="full-width-image" src="assets/pfp1.jpg" border=2px>
+       <img class="full-width-image" src="../assets/pfp1.jpg" border=2px>
       <br>
       <p>
       <b>Talyssa Topacio</b> & her cat Boson are based in Southern California. Depending on 
@@ -52,17 +52,17 @@ function headerHTML() {
         <div class="nav-buttons">
         <nav>
           <ul>
-            <li><a href="/science"><img src="page_headings/scientist.png" alt="Scientist" style="width:70%"></a></li>
-            <li><a href="/creative"><img src="page_headings/creative.png" alt="Creative" style="width:70%"></a></li>
-            <li><a href="/hobby"><img src="page_headings/hobbyist.png" alt="Hobbyist" style="width:70%"></a></li>
+            <li><a href="../science"><img src="../page_headings/scientist.png" alt="Scientist" style="width:70%"></a></li>
+            <li><a href="../creative"><img src="../page_headings/creative.png" alt="Creative" style="width:70%"></a></li>
+            <li><a href="../hobby"><img src="../page_headings/hobbyist.png" alt="Hobbyist" style="width:70%"></a></li>
           </ul>
         </nav>
         </div>
         
-        <img class="full-width-image" src="assets/welcomecats.gif"><br><br>
+        <img class="full-width-image" src="../assets/welcomecats.gif"><br><br>
 
         <div class="sidebar-section">
-         <img src="page_headings/links.png" alt="Links" style="width:70%">
+         <img src="../page_headings/links.png" alt="Links" style="width:70%">
           <ul>
             <a href="https://github.com/talyssaonline">> personal github</a><br>
             <a href="https://www.goodreads.com/user/show/10533005-talyssa">> goodreads</a><br>
@@ -75,21 +75,21 @@ function headerHTML() {
         </div>
 
         <div class="sidebar-section">
-        <img src="assets/email.gif" style="width:50%"><br>
+        <img src="../assets/email.gif" style="width:50%"><br>
             <p>For professional inquiries please email
             <a href="mailto:sendtotalyssa@gmail.com">sendtotalyssa@gmail.com</a></p>
         </div>
 
-        <img src="assets/book.gif" style="width:50%"><br>
+        <img src="../assets/book.gif" style="width:50%"><br>
         <a href="https://www.yourworldoftext.com/~talyssa.txt/">★GUESTBOOK★</a><br><br>
 
         
         
         <div class="sidebar-section">
-          <img class="full-width-image" src="assets/DolphinGlobe.gif">
+          <img class="full-width-image" src="../assets/DolphinGlobe.gif">
           <marquee>
-            <img src="assets/buttons/1.gif" style="width:50%"> 
-            <img src="assets/buttons/2.gif" style="width:50%">
+            <img src="../assets/buttons/1.gif" style="width:50%"> 
+            <img src="../assets/buttons/2.gif" style="width:50%">
           </marquee>
           
         </div>
