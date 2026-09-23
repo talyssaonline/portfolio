@@ -30,6 +30,7 @@ function headerHTML() {
       <ul>
           <a href="index.html" target="_self">> Home</a>
           <a href="/links" target="_self">> Link Page</a> 
+          <a href="/stream" target="_self">> Live Stream</a> 
           <a href="resources.html" target="_self">> Resources</a>
       </ul>
       </div>
