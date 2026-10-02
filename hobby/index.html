@@ -1,67 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-
-    <!-- Change your site title: (It is shown in the tab) -->
-    <title>talyssa.com</title>
-
-    <!-- Change your site description: (It is shown in Google results) -->
-    <meta content="talyssa's personal website with a collection of my work and interests" name="description" />
-
-    <!-- Setting character encoding and viewport size. Do not remove. -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- FavIcon (small image in tab), change to any image you want: -->
-    <link href="../assets/flower.gif" rel="icon" type="image/x-icon" />
-
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../assets/flower.gif" rel="icon" type="image/x-icon" />  <title>talyssa.com</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!-- CSS: -->
-    <!-- You will have to change this to "../style.css" if this HTML file is in a subfolder, to "../../style.css" if this HTML file is in 2 subfolders, etc. -->
-    <link href="../style.css" rel="stylesheet" />
-    
+    <link href="./style.css" rel="stylesheet" />
     <!-- JavaScript: -->
     <!-- You will have to change this to "../layout.js" if this HTML file is in a subfolder, to "../../layout.js" if this HTML file is in 2 subfolders, etc. -->
-    <script src="./layout.js"></script>
-
-    <script>
-      // Template generated with petrapixel's layout generator.
-      // (Please do not remove this credit.)
-      console.log("%cTemplate generated with petrapixel's layout generator: https://petrapixel.neocities.org/coding/layout-generator", "font-size: 14pt; color: #922a45; background: #ffd3ef");
-    </script>
+    <!-- <script src="./layout.js"></script> -->
   </head>
-  <body>
-    <!-- The next line is a skip-to-content link for keyboard users. Do not remove it! -->
-    <a href="#content" id="skip-to-content-link">Skip to content</a>
 
-    <div class="layout">
+<body>
+
+<!-- nav buttons -->
+ <div id="nav-head">
+  <div class="nav-buttons">
+    <a href="/"><img src="../assets/button_home.png" alt="Home" style="width:50px"></a>
+    <a href="/links"><img src="../assets/button_links.png" alt="Links" style="width:50px"></a>
+    <a href="/stream"><img src="../assets/button_stream.png" alt="Stream" style="width:50px"></a>
+  </div>
+</div>
+
+<div id="columns"> <!--note that columns are the page sections, but there's "column" for the gallery grids too-->
+
+<div id="left-column">
+    <div id="left-content">
+        <img src="hobby_assets/bubble.png" alt=""style="width:110%">
+      <div class="left-text">
+        <img src="hobby_assets/hobby_header.png" alt="">
+        <br><br><i>
+        a mix of personal work & some<br>
+       projects I've helped out with<br><br>
+   
+        <b>
+            Go to:<br>
+            <li><a href="#books">Favorite Books</a><br></li>
+            <li><a href="#stationary">Journalling & Stationary</a></li>
+            <li><a href="#music">Albums & Playlists</a></li>
+        </b></i>
+      </div>
+    </div>
+</div>
       
-      <!-- =============================================== -->
-      <!-- Header (and Sidebars) will be loaded per JavaScript! Edit layout.js to change. -->
-      <!-- =============================================== -->
-
-  
-      <main id="content"> <!-- Do NOT remove the ID here -->
-
-        <noscript>Please enable JavaScript to view this website!</noscript>
-
-        <!-- =============================================== -->
-        <!-- MAIN CONTENT -->
-        <!-- =============================================== -->
-
-
-        <section>
-        <img src="../page_headings/is_hobbyist.png" alt="pet" style="width:50%">
-      
-        <br><br>
-         <!-- anchor links -->
-          <b>Jump to...</b><br>
-          <a href="#books">Favorite Books</a><br>
-          <a href="#stationary">My Journal Ecosystem</a>
-
+<div id="right-column">
+<div id="right-content">
 
 <!-- Book GRID-->
-<h2 id="books">Some of my favorite books</h2>
-<b>Keep up with my current books <a href="https://www.goodreads.com/user/show/10533005-talyssa">on goodreads</a><br>
+<img src="hobby_assets/head_books.png" id="books" alt="book" style="width:70%"><br>
+<p>Keep up with my current books <a href="https://www.goodreads.com/user/show/10533005-talyssa">on goodreads</a><br></p>
 
 <div class="gallery">
 <!-- row 1 -->
@@ -168,42 +156,89 @@
 </div>
 <!-- END book GRID-->
 
+
+
  <br><br>
-<h2 id="stationary">My Journalling Ecosystem</h2>
-I'm a big advocate for putting pen to paper. <br><br>
+
+ <!--stationary -->
+<img src="hobby_assets/head_journalling.png" id="stationary" alt="book" style="width:70%"><br><br>
 
 <!--Journal Gallery-->
 <div class="gallery">
     <div class="content">
     <img src="hobby_assets/personal.png" alt="journal" style="width:75%">
+    <p><b>my personal journal (2026)</b><br>
+    Catch-all. Midori MD B6 slim (blank) in a veg-tanned leather journal cover I made myself</p><br>
     <img src="hobby_assets/5year.png" alt="journal" style="width:75%">
+    <p><b>leuchtturm 5-year journal (2023-2027)</b><br>
+    Daily journal spanning 5 years in an A5 leather journal cover I made myself</p><br>
     <img src="hobby_assets/weeks.png" alt="journal" style="width:75%">
+    <p><b>my weekly planner (2026)</b><br>
+    Hobonichi sneaker weeks mega that I use for planning only</p><br>
     <img src="hobby_assets/wines.png" alt="journal" style="width:75%">
+    <p><b>wine journal</b><br>
+    Another midori MD A6 (blank) for catching wine labels and the nights spent with them</p><br>
     <img src="hobby_assets/commonplace.png" alt="journal" style="width:75%">
+    <p><b>common place journal</b><br>
+    yet ANOTHER midori MD B6 slim (grid). I'm not confident about this one, but for now it catches 
+    information and ideas that might be relevant longer than the stuff in my personal journal (i.e. lists, recipies, etc.)</p><br>
     </div>
 </div>
 
-<h3>Pens & Inks</h3>
-I'm a proud fountain pen user! My favorites are the <i>LAMY Safari</i> and the <i>TWISBI Eco</i> in fine or extra fine. My current go-to inks:<br>
-<b>Black:</b> Platinum Carbon Ink <br>
-<b>Green:</b> Platinum Forest Black<br>
-<b>Red/Pink:</b> Lennon Toolbar Peach Blossom <br>
-<b>Grey/Charcoal:</b> Ferris Wheel Press x Atlas Stationers Iron Ore <br>
-
-
-
- 
-        </section>
-      </main>
-      
-      <!-- =============================================== -->
-      <!-- Footer will be loaded per JavaScript! Edit layout.js to change. -->
-      <!-- =============================================== -->
-
-  
-    <!-- Closing .layout: -->
+<div class="gallery">
+<!-- row 1 -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+    <img src="hobby_assets/twisbieco.png" alt="pen" style="width:100%">
+    <p><b>TWISBI Eco</b><br>
+    I keep mine inked with platinum carbo black at all times. If I was only allowed one single pen, this would be it.</p>
     </div>
+  </div>
 
+  <div class="column">
+    <div class="content">
+    <img src="hobby_assets/platinumcarbon.png" alt="ink" style="width:100%">
+    <p><b>Platinum Carbon Ink</b></p>
+    </div>
+  </div>
+  </div>
+
+  <!-- row 1 -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+    <img src="hobby_assets/lamysafari.png" alt="pen" style="width:100%">
+    <p><b>LAMY Safari</b><br>
+    I do love my safaris & they're a good alternative to my twisbi since the tips are interchangable and the ink goes into 
+  a converter as opposed to the pen barrel itself. I like using mine to rotate different inks depending on my mood.</p>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="content" style="margin-top: 75%; margin-left: 20%">
+    <p><b>Honorable ink mentions:</b><br>
+    <li>Peach Blossom by Lennon Toolbar (pink)</li>
+    <li>Forest Black by Platinum (dark green)</li>
+    <li>From the Earth to the Moon by Wearingeul (blue)</li>
+    <li>Atlas Iron Ore by Ferrris Wheel Press x Atlas Stationers (grey)</li></p>
+    </div>
+  </div>
+  </div><br><br>
+</div> <!--end gallery-->
+
+<!--MUSIC-->
+<img src="hobby_assets/head_music.png" id="music" alt="music" style="width:20%"><br><br>
+<p>Favorite albums right now:</p>
+<div class="content">
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2yDFVH9CeOHt0sc9eI0aBs?utm_source=generator&si=68b2a74397c643f0" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/06CjF89lLSSiVWXujVVtQs?utm_source=generator&si=47b846bba6fa4324" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+<iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/4RrsgnUbZIFTw42Apa8lXO?utm_source=generator&si=027e518a35be4970" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+</div>
+
+<!--end right column-->
+</div>
+</div>
 
     <!-- Add any additional Javascript code (<script></script>) here. -->
   </body>

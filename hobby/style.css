@@ -1,0 +1,236 @@
+
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: x-large;
+}
+
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+h3 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: large;
+}
+
+h4 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  font-size: medium;
+}
+
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  font-size: small;
+}
+
+b {
+  font-weight: bold;
+}
+
+
+/* NAV HEADER */
+#nav-head {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.nav-buttons a {
+    display: inline-block;
+}
+
+.nav-buttons a:hover{
+  transform: scale(1.25) perspective(2px) rotate(-10deg);
+}
+
+
+body {
+    background-image: url(hobby_assets/hills.jpg);
+    font-family: monospace;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+
+/* -------------------------------------------------------- */
+/* GALLERY STYLING */
+/* -------------------------------------------------------- */
+.gallery * {
+  box-sizing: border-box;
+}
+
+.gallery .body {
+  background-color: none;
+  padding: 10px;
+  font-family: monospace;
+}
+
+/* Center website */
+.gallery .main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+.gallery .row {
+  margin: 2px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.gallery .row,
+.gallery .row > .gallery .column {
+  padding: 2px;
+}
+
+/* Create (100/width) equal columns that floats next to each other */
+.gallery .column {
+  float: left;
+  width: 33%;
+}
+
+/* Clear floats after rows */ 
+.gallery .row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Content */
+.gallery .content {
+  background-color: transparent;
+  padding: 4px;
+  font-size: small;
+
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+.gallery @media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+.gallery @media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+
+
+/* -------------------------------------------------------- */
+/* COLUMNS */
+/* -------------------------------------------------------- */
+
+#columns {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* LEFT */
+#left-column {
+    position: relative;
+    left: 2%;
+    top: 20%;
+    width: 60%;
+}
+
+#left-content {
+    position: relative;
+    width: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+#left-content > img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.left-text {
+    position: absolute;
+    top: 18%;
+    left: 44%;
+    width: 50%;
+    font-size: 1vw;
+}
+
+.left-text img {
+    width: 68%;
+    height: auto;
+}
+
+.left-text a{
+    color: black;
+}
+
+.left-text a:hover{
+    color: black;
+    text-shadow: 0 0 30px blue;
+}
+
+/* RIGHT */
+#right-column {
+    background-color: transparent;
+    width: 75%;
+    height: 100vh;
+    right: 10px;
+    padding-left: 10px;
+    overflow-y: auto;
+    position: relative;
+
+}
+
+#right-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: x-large;
+    line-height: 1.5;
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    padding-top: 8%;
+    padding-bottom: 10%;
+}
+
+/* -------------------------------------------------------- */
+/* SCROLLBAR */
+/* -------------------------------------------------------- */
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+ background-color: transparent;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black; 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: black; 
+}

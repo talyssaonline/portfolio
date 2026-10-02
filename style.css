@@ -1,609 +1,209 @@
 
-  
-/* -------------------------------------------------------- */
-/* VARIABLES */
-/* -------------------------------------------------------- */
+/* header {
+    text-align: left;
+    margin: 1em;
+    background-color: transparent;
+    z-index: 2;
+} */
 
-/* Variables are used like this: var(--text-color) */
-:root {
-  /* Background Colors: */
-  --background-color: white;
-  --background-image: none; /* url("assets/bg7.jpg") */
-  --background-repeat: repeat;
-  --content-background-color: none;
-  --sidebar-background-color: none;
-
-  /* Text Colors: */
-  --text-color: #000000;
-  --sidebar-text-color: #000000;
-  --link-color: blue;
-  --link-color-hover: #ff4992;
-
-  /* Text: */
-  --font: Times, serif;
-  --heading-font: Arial, sans-serif;
-  --font-size: 14px;
-
-  /* Other Settings: */
-  --margin: 10px;
-  --padding: 15px;
-  --border: none;
-  --round-borders: 0px;
-  --sidebar-width: 200px;
+h1 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  font-size: x-large;
 }
 
-/* -------------------------------------------------------- */
-/* BASICS */
-/* -------------------------------------------------------- */
-
-* {
-  box-sizing: border-box;
+h2 {
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: lighter;
+  font-size: larger;
 }
 
+p {
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large;
+}
+
+
+/* NAV HEADER */
+#nav-head {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+}
+
+.nav-buttons a {
+    display: inline-block;
+}
+
+.nav-buttons a:hover{
+  transform: scale(1.25) perspective(2px) rotate(-10deg);
+}
+
+/* COLUMNS */
 body {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  min-height: 100vh;
-  font-size: var(--font-size);
-  margin: 0;
-  padding: var(--margin);
-  color: var(--text-color);
-  font-family: var(--font);
-  line-height: 1.2;
-  background-image: var(--background-image);
-  background-repeat: var(--background-repeat);
-  
-}
-
-::selection {
-  /* (Text highlighted by the user) */
-  background: rgba(255, 239, 160, 0.497);
-}
-
-mark {
-  /* Text highlighted by using the <mark> element */
-  text-shadow: 1px 1px 4px var(--link-color);
-  background-color: inherit;
-  color: var(--text-color);
-}
-
-/* Links: */
-a {
-  text-decoration: none;
-}
-
-a,
-a:visited {
-  color: var(--link-color);
-}
-
-a:hover,
-a:focus {
-  color: var(--link-color-hover);
-  text-decoration: none;
-}
-
-/* -------------------------------------------------------- */
-/* LAYOUT */
-/* -------------------------------------------------------- */
-
-.layout {
-  width: 100%;
-  display: grid;
-  grid-gap: var(--margin);
-  grid-template: "header header" auto "leftSidebar main" auto "footer footer" auto / var(--sidebar-width) auto;
-  /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
-}
-
-main {
-  grid-area: main;
-  overflow-y: auto;
-  padding: var(--padding);
-  background: var(--content-background-color);
-  border: var(--border);
-  border-radius: var(--round-borders);
-}
-
-/* -------------------------------------------------------- */
-/* HEADER */
-/* -------------------------------------------------------- */
-
-header {
-  grid-area: header;
-  font-size: 1.2em;
-  border: none;
-  border-radius: none;
-  background: none;
-}
-
-.header-content {
-  padding: 3px;
-}
-
-.header-title {
-  font-family: var(--heading-font);
-  font-size: 1.5em;
-  font-weight: bold;
-}
-
-.header-image img {
-  width: auto;
-  height: 10%;
-}
-
-/* -------------------------------------------------------- */
-/* SIDEBARS */
-/* -------------------------------------------------------- */
-
-aside {
-  grid-area: aside;
-  border: var(--border);
-  border-radius: var(--round-borders);
-  overflow: hidden;
-  background: var(--sidebar-background-color);
-  padding: var(--padding);
-  color: var(--sidebar-text-color);
-}
-
-.left-sidebar {
-  grid-area: leftSidebar;
-}
-
-.right-sidebar {
-  grid-area: rightSidebar;
-}
-
-.sidebar-title {
-  font-weight: bold;
-  font-size: 1.2em;
-  font-family: var(--heading-font);
-}
-
-.sidebar-section:not(:last-child) {
-  margin-bottom: 3em;
-}
-
-.sidebar-section ul,
-.sidebar-section ol {
-  padding-left: 1.5em;
-}
-
-.sidebar-section > *:not(p):not(ul):not(ol):not(blockquote) {
-  margin-top: 10px;
-}
-
-/* Sidebar Blockquote: */
-
-.sidebar-section blockquote {
-  background: rgba(199, 180, 212, 0.479);
-  padding: 15px;
-  margin: 1em 0;
-  border-radius: 10px;
-  overflow: hidden;
-}
-
-.sidebar-section blockquote > *:first-child {
-  margin-top: 0;
-}
-
-.sidebar-section blockquote > *:last-child {
-  margin-bottom: 0;
-}
-
-/* Site Button: */
-
-.site-button {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.site-button textarea {
-  font-family: monospace;
-  font-size: 0.7em;
-}
-
-/* -------------------------------------------------------- */
-/* FOOTER */
-/* -------------------------------------------------------- */
-
-footer {
-  grid-area: footer;
-  border: none;
-  border-radius: var(--round-borders);
-  overflow: hidden;
-  font-size: 0.75em;
-  padding: 15px;
-  background: none;
-  display: flex;
-  justify-content: center;
-}
-
-footer a,
-footer a:visited {
-  color: var(--link-color);
-}
-
-footer a:hover,
-footer a:focus {
-  color: var(--link-color-hover);
-}
-
-/* -------------------------------------------------------- */
-/* NAVIGATION */
-/* -------------------------------------------------------- */
-
-nav {
-  margin-bottom: 3em;
-}
-.nav-buttons li:hover {
-  background-color: none;
-/*  Making button bigger on hover  */
-  transform: scale(1.25) perspective(1px) rotate(-10deg);
-}
-
-nav .sidebar-title {
-  margin-bottom: 0.5em;
-}
-
-nav ul {
-  margin: 0 -5px;
-  padding: 0;
-  list-style: none;
-  user-select: none;
-}
-
-nav ul li {
-  margin-bottom: 0;
-}
-
-nav > ul li > a,
-nav > ul li > strong {
-  display: inline-block;
-}
-
-nav > ul li > a,
-nav > ul li > details summary,
-nav > ul li > strong {
-  padding: 5px 10px;
-}
-
-nav > ul li > a.active,
-nav > ul li > details.active summary {
-  font-weight: bold;
-}
-
-nav ul summary {
-  cursor: pointer;
-}
-
-nav ul ul li > a {
-  padding-left: 30px;
-}
-
-
-
-/* -------------------------------------------------------- */
-/* CONTENT */
-/* -------------------------------------------------------- */
-
-main {
-  line-height: 1.5;
-}
-
-main a,
-main a:visited {
-  color: var(--link-color);
-}
-
-main a:hover,
-main a:focus {
-  color: var(--link-color-hover);
-  text-decoration-style: wavy;
-}
-
-main p,
-main .image,
-main .full-width-image,
-main .two-columns {
-  margin: 0.75em 0;
-}
-
-main ol,
-main ul {
-  margin: 0.5em 0;
-  padding-left: 1.5em;
-}
-
-main ol li,
-main ul li {
-  margin-bottom: 0.2em;
-  line-height: 1.3;
-}
-
-main ol {
-  padding-left: 2em;
-}
-
-main blockquote {
-  background: rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  margin: 1em 0;
-  border-radius: 10px;
-}
-
-main pre {
-  margin: 1em 0 1.5em;
-}
-
-main code {
-  text-transform: none;
-}
-
-main center {
-  margin: 1em 0;
-  padding: 0 1em;
-}
-
-main hr {
-  border: 0;
-  border-top: var(--border);
-  margin: 1.5em 0;
-}
-
-/* HEADINGS: */
-
-main h1,
-main h2,
-main h3,
-main h4,
-main h5,
-main h6 {
-  font-family: var(--heading-font);
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
-main h1:first-child,
-main h2:first-child,
-main h3:first-child,
-main h4:first-child,
-main h5:first-child,
-main h6:first-child {
-  margin-top: 0;
-}
-
-main h1 {
-  font-size: 1.5em;
-}
-
-main h2 {
-  font-size: 1.4em;
-}
-
-main h3 {
-  font-size: 1.3em;
-}
-
-main h4 {
-  font-size: 1.2em;
-}
-
-main h5 {
-  font-size: 1.1em;
-}
-
-main h6 {
-  font-size: 1em;
-}
-
-/* COLUMNS: */
-
-.two-columns {
-  display: flex;
-}
-
-.two-columns > * {
-  flex: 1 1 0;
-  margin: 0;
-}
-
-.two-columns > *:first-child {
-  padding-right: 0.75em;
-}
-
-.two-columns > *:last-child {
-  padding-left: 0.75em;
-}
-
-/* -------------------------------------------------------- */
-/* GALLERY STYLING */
-/* -------------------------------------------------------- */
-.gallery * {
-  box-sizing: border-box;
-}
-
-.gallery .body {
-  background-color: none;
-  padding: 20px;
-  font-family: monospace;
-}
-
-/* Center website */
-.gallery .main {
-  max-width: 1000px;
-  margin: auto;
-}
-
-.gallery .h1 {
-  font-size: 50px;
-  word-break: break-all;
-}
-.gallery .p {
-  font-family: monospace;
-  font-size: 20px;
-}
-
-.gallery .row {
-  margin: 8px -16px;
-}
-
-/* Add padding BETWEEN each column */
-.gallery .row,
-.gallery .row > .gallery .column {
-  padding: 8px;
-}
-
-/* Create four equal columns that floats next to each other */
-.gallery .column {
-  float: left;
-  width: 25%;
-}
-
-/* Clear floats after rows */ 
-.gallery .row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Content */
-.gallery .content {
-  background-color: transparent;
-  padding: 10px;
-  font-family: monospace;
-  font-size: 8px;
-}
-
-/* Responsive layout - makes a two column-layout instead of four columns */
-.gallery @media screen and (max-width: 900px) {
-  .column {
+    font-family: monospace;
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 100%;
+    text-align: left;
+    margin: 0 auto;
+    overflow: hidden;
+    
+}
+
+#columns {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+/* LEFT */
+#left-column {
+    background-image: url('assets/legalpad.png');
+    background-color: transparent;
+    background-size: cover;
+    aspect-ratio: 4/6;
     width: 50%;
-  }
+    height: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 2;
+    transform: translateX(-30px) translateY(40px) rotate(-7deg);
+    transform-origin: top center;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 0;
+    margin-right: -5%;
+    top: -5%;
 }
 
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-.gallery @media screen and (max-width: 600px) {
-  .column {
+#left-content {   
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    position: relative;
     width: 100%;
-  }
+    margin: 0 auto;
+    padding-top: 20%;
+    padding-bottom: 10%;
 }
 
-/* -------------------------------------------------------- */
-/* CONTENT IMAGES */
-/* -------------------------------------------------------- */
-
-.image {
-  display: block;
-  width: auto;
-  height: auto;
-  max-width: 100%;
+.bio {
+    display: flex;
+    align-items: flex-start;
+    gap: 0px;
+    margin-top: 20px;
 }
 
-.full-width-image {
-  display: block;
-  width: 100%;
-  height: auto;
+.bio img {
+    width: 275px;
+    float: left;
+    margin-left: 25px;
+    margin-bottom: 10px;
 }
 
-.images {
-  display: flex;
-  width: calc(100% + 5px + 5px);
-  margin-left: -5px;
-  margin-right: -5px;
+.bio p {
+    margin-top: 30px;
+    margin-right: 25px;
+    width: 500px;
+    transform: translateX(-20px);
 }
 
-.images img {
-  width: 100%;
-  height: auto;
-  padding: 5px;
-  margin: 0;
-  overflow: hidden;
+
+/* RIGHT */
+#right-column {
+    background-image: url('assets/mlp_paper.png');
+    background-size: cover;
+    width: 50%;
+    height: 100vh;
+    transform-origin: top center;
+    transform: translateX(70px);
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 }
 
-/* -------------------------------------------------------- */
-/* ACCESSIBILITY */
-/* -------------------------------------------------------- */
-
-/* please do not remove this. */
-
-#skip-to-content-link {
-  position: fixed;
-  top: 0;
-  left: 0;
-  display: inline-block;
-  padding: 0.375rem 0.75rem;
-  line-height: 1;
-  font-size: 1.25rem;
-  background-color: var(--content-background-color);
-  color: var(--text-color);
-  transform: translateY(-3rem);
-  transition: transform 0.1s ease-in;
-  z-index: 99999999999;
+#right-content {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+    line-height: 1.5;
+    position: relative;
+    width: 57%;
+    margin: 0 auto;
+    padding-top: 25%;
+    padding-bottom: 10%;
 }
 
-#skip-to-content-link:focus,
-#skip-to-content-link:focus-within {
-  transform: translateY(0);
+
+/* BOTTOM */
+#bottom-paper {
+    background-image: url('assets/notepad.png');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    aspect-ratio: 4/6;
+    width: 30%;
+    height: auto;
+    bottom: 0;
+    left: 40%;
+    transform: translateY(175px) translateX(-45%);
+    z-index: 5;
+
 }
 
-/* -------------------------------------------------------- */
-/* MOBILE RESPONSIVE */
-/* -------------------------------------------------------- */
+#bottom-content {
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+    position: relative;
+    width: 75%;
+    margin: 0 auto;
+    padding-top: 15%;
+    padding-bottom: 10%;
+}
 
-/* CSS Code for devices < 800px */
-@media (max-width: 800px) {
-  body {
-    font-size: 14px;
-  }
+#bottom-content a {
+    display: inline-block;
+}
 
-  .layout {
+#bottom-content a:hover{
+  transform: scale(1.25) perspective(2px);
+}
+
+/* ANIMAL NOTE */
+#animal-note {
+    position: absolute;
+    left: 67%;
+    bottom: 8%;
+    z-index: 4;
+}
+
+#note-content {
+    position: relative;
+    width: 400px;
+    font-family: 'Times New Roman', Times, serif;
+    line-height: 1.5;
+}
+
+#note-content img {
+    display: block;
     width: 100%;
-    grid-template: "header" auto  "leftSidebar" auto "main" auto "footer" auto / 1fr;
-    /* Confused by the grid? Check out my tutorial: https://petrapixel.neocities.org/coding/positioning-tutorial#grid */
-  }
+    height: auto;
+}
 
-  
-  .right-sidebar { 
-    display: none;
-  }
+.note-text {
+    position: absolute;
+    top: 25%;
+    left: 35%;
+    width: 50%;
+}
 
-  aside {
-    border-bottom: 1px solid;
-    padding: 9px;
-    font-size: 0.9em;
-  }
+.note-text a{
+    color: black;
+}
 
-  
-  nav {
-    padding: 0;
-  }
-
-  nav > ul {
-    padding-top: 0.5em;
-  }
-
-  nav > ul li > a,
-  nav > ul li > details summary,
-  nav > ul li > strong {
-    padding: 0.5em;
-  }
-
-  main {
-    max-height: none;
-    padding: 15px;
-  }
-
-  .images {
-    flex-wrap: wrap;
-  }
-
-  .images img {
-    width: 100%;
-  }
-
-  #skip-to-content-link {
-    font-size: 1rem;
-  }
+.note-text a:hover{
+    color: black;
+    text-shadow: 0 0 30px white;
 }
